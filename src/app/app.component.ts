@@ -1,9 +1,12 @@
 import {Component} from '@angular/core';
+import {Http, Response}          from '@angular/http';
+
+import {Observable} from 'rxjs/Observable';
 
 import '../assets/css/styles.css';
 import {DummyService} from "./dummy.service";
 import {AppService} from "./app.service";
-import {Note} from "./note.model";
+
 
 @Component({
     selector: 'my-app',
@@ -11,10 +14,10 @@ import {Note} from "./note.model";
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    constructor(private dummyService: DummyService, private appService: AppService) {
-        this.dummyService.sayMyName();
-        this.appService.getHeroes().subscribe((data: Note[]) => {
-            console.log(data);
+    constructor(private appService: AppService) {
+        let observableResponse: Observable<Response> = this.appService.getNotes();
+        observableResponse.subscribe((data) => {
+            console.log(data.json());
         });
     }
 }
