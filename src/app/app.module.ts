@@ -5,6 +5,7 @@ import {HttpModule, JsonpModule} from '@angular/http';
 
 import {AppComponent} from './app.component';
 import {DummyService} from './dummy.service';
+import {AppService} from "./app.service";
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import {DummyService} from './dummy.service';
         AppComponent
     ],
     bootstrap: [AppComponent],
-    providers: [DummyService]
+    providers: [DummyService, AppService]
 })
 export class AppModule {
 }
