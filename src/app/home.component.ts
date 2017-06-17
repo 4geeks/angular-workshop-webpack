@@ -3,19 +3,14 @@ import { Component } from '@angular/core';
 import '../assets/css/styles.css';
 
 @Component({
-  selector: 'app',
+  selector: 'home',
   template: `
-      <h1>My First Angular App</h1>
-        <nav>
-            <a routerLink="/app">Dashboard</a>
-            <a routerLink="/new-note">New Note</a>
-      </nav>
-      <router-outlet></router-outlet>
+      <h1>HOME</h1>
   `,
   styleUrls: ['./app.component.css']
 })
 export class HomeComponent {
   constructor(){
-    alert("HOME");
+
   }
 }

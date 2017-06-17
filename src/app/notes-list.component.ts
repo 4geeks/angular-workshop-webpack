@@ -3,11 +3,13 @@ import { Component } from '@angular/core';
 import '../assets/css/styles.css';
 
 @Component({
-  selector: 'app',
-  templateUrl: './app.component.html',
+  selector: 'home',
+  template: `
+      <h1>Notes List</h1>
+  `,
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class NotesListComponent {
   constructor(){
 
   }

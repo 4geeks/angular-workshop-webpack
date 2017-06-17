@@ -6,12 +6,13 @@ import {AppComponent} from './app.component';
 import {NewNoteComponent} from './new-note.component';
 import {HomeComponent} from './home.component';
 
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule} from '@angular/router';
+import {NotesListComponent} from './notes-list.component';
 
 
-export const appRoutes: Routes = [
+export const appRoutes = [
     {path: '', component: HomeComponent},
-    {path: 'app', component: AppComponent},
+    {path: 'notes-list', component: NotesListComponent},
     {path: 'new-note', component: NewNoteComponent}
 ];
 
@@ -21,9 +22,10 @@ export const appRoutes: Routes = [
         BrowserModule
     ],
     declarations: [
-        AppComponent, NewNoteComponent, HomeComponent
+        AppComponent, NewNoteComponent, HomeComponent,
+        NotesListComponent
     ],
-    bootstrap: [HomeComponent]
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
