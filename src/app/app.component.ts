@@ -7,8 +7,4 @@ import '../assets/css/styles.css';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  constructor(){
-    alert('HOLA MUNDO2');
-  }
-}
+export class AppComponent { }
