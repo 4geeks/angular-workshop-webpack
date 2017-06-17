@@ -1,5 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule}  from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
 
 
 import {AppComponent} from './app.component';
@@ -8,6 +10,8 @@ import {HomeComponent} from './home.component';
 
 import {RouterModule} from '@angular/router';
 import {NotesListComponent} from './notes-list.component';
+import {NotesServices} from "./notes.services";
+import {NoteDetailsComponent} from "./Notes-details.component";
 
 
 export const appRoutes = [
@@ -19,11 +23,17 @@ export const appRoutes = [
 @NgModule({
     imports: [
         RouterModule.forRoot(appRoutes),
-        BrowserModule
+        BrowserModule,
+        FormsModule,
+        HttpModule
+    ],
+    providers: [
+      NotesServices
     ],
     declarations: [
         AppComponent, NewNoteComponent, HomeComponent,
-        NotesListComponent
+        NotesListComponent,
+        NoteDetailsComponent
     ],
     bootstrap: [AppComponent]
 })
