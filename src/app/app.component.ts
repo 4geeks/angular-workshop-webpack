@@ -9,6 +9,6 @@ import '../assets/css/styles.css';
 })
 export class AppComponent {
   constructor(){
-    alert('HOLA MUNDO');
+    alert('HOLA MUNDO2');
   }
 }
